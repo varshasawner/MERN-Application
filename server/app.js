@@ -4,17 +4,12 @@ const express = require('express');
 const app = express();
 
 dotenv.config({path:'./config.env'});
-
-// connect to db
-const DB = process.env.DATABASE;
+require('./db/conn.js');
 const PORT = process.env.PORT;
-mongoose.connect(DB).then(() => {
-    console.log("connected");
-}).catch((err) => {console.log(err)});
 
 // middleware
 const middleware = (req, res, next) => {
-    console.log("middleware test");
+    console.log("middleware test............");
     next();
 }
 
@@ -41,5 +36,5 @@ app.get('/signup', (req, res)=>{
 
 // console.log("hello world............");
 app.listen(PORT, ()=>{
-    console.log('3000 server is running');
+    console.log(`${PORT} server is running`);
 });
