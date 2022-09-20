@@ -11,7 +11,6 @@ app.use(express.json());
 // link the router file to make router
 app.use(require('./router/auth'));
 
-
 const PORT = process.env.PORT;
 
 // middleware
