@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 require('../db/conn');
 const User = require('../model/userSchema');
@@ -43,12 +44,12 @@ router.post('/register', (req, res) => {
 });
 
 
-
 // login route
 router.post('/signin', async (req, res)=>{
     // console.log(req.body);
     // res.json({message : "signin"});
     try{
+        let token;
         const {email, password} = req.body;
         if(!email || !password){
             return res.status(400).json({message : "Plz Fill Both Fields"});
@@ -62,9 +63,15 @@ router.post('/signin', async (req, res)=>{
         }else {
             const passwordCheck = await bcrypt.compare(password, userLogin.password);
             if(!passwordCheck){
-                res.status(402).json( { error: "Incorrect Password"});
+                res.status(402).json( { error: "Incorrect Credentials"});
             }else{
-            res.json({message : "User Login Successfull"});
+                token = await userLogin.generateAuthToken();
+
+                res.cookie("jwtoken", token, {
+                    expires:  new Date(Date.now()+25892000000),
+                    httpOnly :true
+                });
+                res.json({message : "User Login Successfull"});
             }
         }
 

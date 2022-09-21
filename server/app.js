@@ -29,6 +29,7 @@ app.get('/about', middleware ,(req, res)=>{
 });
 
 app.get('/contact', (req, res)=>{
+    res.cookie('cookieName', 'cookieValue')
     res.send(`Contact page`);
 });
 
