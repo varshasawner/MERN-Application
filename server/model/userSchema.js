@@ -40,6 +40,6 @@ userSchema.pre('save',async function(next) {
     next();
 });
 
-
+// Collection Creation
 const User  = mongoose.model('USER', userSchema);
 module.exports = User;
