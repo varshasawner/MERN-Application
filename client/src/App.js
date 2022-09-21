@@ -1,10 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 function App() {
   return (
     <div>
-      <h1>Front Page Here</h1>
+      <Navbar />
+      <Route>
+        <Home />
+      </Route>
+      
     </div>
   );
 }
