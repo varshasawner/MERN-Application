@@ -1,9 +1,10 @@
 import React from "react";
+import loginpic from '../images/login.png';
 
 const Login = () => {
     return (
         <>
-            <h1>Login Page</h1>
+            
         </>
     )
 }

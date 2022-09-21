@@ -1,31 +1,32 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <>
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+                    <a class="navbar-brand ms-5" href="javascript:void(0)">MERN AAPPLICATION</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="mynavbar">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Home</a>
+                                <Link to="/" class="nav-link me-4">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/about">About</a>
+                                <Link to="/about" class="nav-link me-4">About</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/contact">Contact</a>
+                                <Link to="/contact" class="nav-link me-4">Contact</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/login">Login</a>
+                                <Link to="/login" class="nav-link me-4">login</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/register">Registration</a>
+                                <Link to="/register" class="nav-link me-4">Registration</Link>
                             </li>
                         </ul>
                     </div>
