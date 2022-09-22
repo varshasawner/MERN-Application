@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 .signup-form{
     float: left;
@@ -26,4 +25,47 @@
 }
 .input-group{
     border: none !important;
+}
+.row_row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.contact_info_item{
+    box-shadow: 0 10px 50px rgb(187, 184, 184), inset 0 5px 50px rgb(169, 168, 168);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin: 10px;
+}
+.left, .right{
+    margin: 0px auto;
+}
+.icon_menu{
+    font-size:20px;
+}
+.home_box{
+    height: 90.6vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(252, 185, 218) 50%, rgb(237, 237, 249) 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+.content_1{
+    text-align: center;
+}
+.contact_form{
+    box-shadow: 0 10px 50px rgb(187, 184, 184), inset 0 5px 50px rgb(169, 168, 168);
+    height: 50vh;
+    width: 50%;
+    margin: auto;
+}
+.home-title{
+    font-size: 60px;
+}
+.home-para{
+    font-size: 35px;
 }

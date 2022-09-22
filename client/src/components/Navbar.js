@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <>
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand ms-5" href="javascript:void(0)">MERN AAPPLICATION</a>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-4">
+                <div class="container">
+                    <a class="navbar-brand ms-5" href="javascript:void(0)">MERN APPLICATION...</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
