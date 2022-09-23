@@ -82,4 +82,19 @@
     align-items: center;
     margin: auto;
 }
+.errorPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    height: 90.6vh;
+}
+.errorPage-content{
+    text-align: center;
+    line-height: 40px;
+}
+.oops{
+    font-size: 100px;
+    color:darkblue;
+}
 

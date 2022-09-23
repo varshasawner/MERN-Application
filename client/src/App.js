@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Login from './components/Login';
 import Registration from './components/Registration';
+import ErrorPage from "./components/ErrorPage";
 import './App.css';
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
         <Route path="/login" element={ <Login /> }></Route>
 
         <Route path="/register" element={ <Registration /> }></Route>
+
+        <Route path="*" element={ <ErrorPage /> }></Route>
 
       </Routes>
 
