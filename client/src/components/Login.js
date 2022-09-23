@@ -19,11 +19,11 @@ const Login = () => {
                                 <span class="input-group-text"><i class="zmdi zmdi-email"></i></span>
                                 <input type="email" class="form-control" placeholder="Enter Email" />
                             </div>
+                            
                             <div class="input-group border-bottom mb-3">
                                 <span class="input-group-text"><i class="zmdi zmdi-lock"></i></span>
                                 <input type="password" class="form-control" placeholder="Enter Password" />
                             </div>
-
 
                             <div class="input-group border-bottom mb-3">
                                 <input type="submit" class="btn btn-primary" value="Login" />

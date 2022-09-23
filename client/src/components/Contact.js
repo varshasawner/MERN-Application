@@ -50,7 +50,7 @@ const Contact = () => {
                 </div>
 
                 {/* get in touch */}
-                <div className="contact_form mt-5">
+                <div className="contact_form mt-5 p-4">
                     <div className="container p-4">
                         <div className="row px-5">
                         <h3 className="mb-4">Get in Touch</h3>

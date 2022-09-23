@@ -43,7 +43,8 @@
     margin: 0px auto;
 }
 .icon_menu{
-    font-size:20px;
+    font-size:23px;
+    color:#156acb;
 }
 .home_box{
     height: 90.6vh;
@@ -59,7 +60,7 @@
 }
 .contact_form{
     box-shadow: 0 10px 50px rgb(187, 184, 184), inset 0 5px 50px rgb(169, 168, 168);
-    height: 50vh;
+    height: auto;
     width: 50%;
     margin: auto;
 }
@@ -69,3 +70,16 @@
 .home-para{
     font-size: 35px;
 }
+.about_box{
+    box-shadow: 0 10px 50px rgb(187, 184, 184), inset 0 5px 50px rgb(169, 168, 168);
+    height: auto;
+    width: 50%;
+    margin: auto;
+}
+.about_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
