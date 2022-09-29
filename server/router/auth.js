@@ -13,25 +13,25 @@ router.get('/', (req, res)=>{
 // register route
 router.post('/register', (req, res) => {
 
-    const {userName, email, phone, work, password, cpassword}= req.body;
+    const {name: userName, email, phone, work, password, cpassword}= req.body;
     if(!userName || !email || !phone || !work || !password || !cpassword){
         return res.status(422).json( {error : "Can not use empty field" });
     }else if(password != cpassword){
-        return res.status(422).json( {error : "Password & Confirm Password Not Mateched" });
+        return res.status(400).json( {error : "Password & Confirm Password Not Matched" });
     }else{
         // create document for user
         const user = new User( {userName, email, phone, work, password, cpassword} );
    
 
-    User.findOne({email: email}).then((userExiste)=>{
+    User.findOne({email: email}).then((userExist)=>{
         // checking user exists of not in DB
-        if(userExiste){
+        if(userExist){
             return res.status(422).json( {error : "Email Already Exists" });
         }
 
         // save user in the collection
         user.save().then(() => {
-            res.status(201).json( {message : "User Saved"});
+            res.status(200).json( {message : "User Saved"});
         }).catch((err) => res.status(500).json ({ Error: "Failed to Register" }));
     }).catch(err => {console.log(err)});
 

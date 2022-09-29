@@ -24,7 +24,7 @@ const Registration = () => {
 
         const {name, email, password, cpassword, work, phone} = user;
 
-        const res =  await fetch("http://localhost:5100/register", {
+        const res =  await fetch("/register", {
             method: "POST",
             headers :{
                 "Content-Type":"application/json"
